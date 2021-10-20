@@ -1,0 +1,25 @@
+/*
+ * Proj.c
+ *
+ *  Created on: Oct 15, 2021
+ *      Author: Mohamed Ezzat
+ */
+
+#include "ultrasonic.h"
+#include "lcd.h"
+
+int main(){
+	g_edgeCount=0;
+	g_timeHigh=0;
+	LCD_init();
+	Ultrasonic_init();
+//	LCD_displayString("Distance = ");
+//		LCD_moveCursor(0, 12);
+//		LCD_intgerToString(Ultrasonic_readDistance());
+		while(1){
+			if(g_edgeCount == 0)
+			{
+			Ultrasonic_readDistance();
+			}
+		}
+}

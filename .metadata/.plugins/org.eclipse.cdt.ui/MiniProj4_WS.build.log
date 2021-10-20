@@ -1,0 +1,36 @@
+17:55:23 **** Incremental Build of configuration Debug for project MiniProj4_WS ****
+make all 
+Building file: ../Proj.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Proj.d" -MT"Proj.o" -c -o "Proj.o" "../Proj.c"
+../Proj.c:8:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../Proj.c
+ 
+Building target: MiniProj4_WS.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MiniProj4_WS.map -mmcu=atmega16 -o "MiniProj4_WS.elf"  ./Proj.o ./gpio.o ./icu.o ./lcd.o ./ultrasonic.o   
+Finished building target: MiniProj4_WS.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MiniProj4_WS.elf  >"MiniProj4_WS.lss"
+Finished building: MiniProj4_WS.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 MiniProj4_WS.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9220 bytes (56.3% Full)
+(.text + .data + .bootloader)
+
+Data:        281 bytes (27.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:55:24 Build Finished. 0 errors, 1 warnings. (took 864ms)
+
