@@ -48,7 +48,7 @@ void Ultrasonic_init(void) {
 void Ultrasonic_Trigger(void) {
 
 	GPIO_writePin(PORTB_ID, PIN5_ID, LOGIC_HIGH);
-	_delay_us(20); /* according to datasheet we keep the trigger pin high for at least 10us */
+	_delay_us(20);
 	GPIO_writePin(PORTB_ID, PIN5_ID, LOGIC_LOW);
 }
 

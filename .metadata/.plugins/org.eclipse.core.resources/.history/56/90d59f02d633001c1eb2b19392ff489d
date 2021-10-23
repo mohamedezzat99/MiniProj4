@@ -4,6 +4,7 @@
  *  Created on: Oct 15, 2021
  *      Author: Mohamed Ezzat
  */
+#define F_CPU 8000000UL
 #include "ultrasonic.h"
 #include "lcd.h"
 #include "avr/interrupt.h"

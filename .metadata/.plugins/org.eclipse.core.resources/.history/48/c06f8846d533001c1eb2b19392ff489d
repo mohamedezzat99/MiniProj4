@@ -48,16 +48,12 @@ void Ultrasonic_init(void) {
 void Ultrasonic_Trigger(void) {
 
 	GPIO_writePin(PORTB_ID, PIN5_ID, LOGIC_HIGH);
-	_delay_us(20); /* according to datasheet we keep the trigger pin high for at least 10us */
+	_delay_us(20);
 	GPIO_writePin(PORTB_ID, PIN5_ID, LOGIC_LOW);
 }
 
-/*
- * Description: this function calls the Ultrasonic trigger function twice as to get a more accurate reading by taking the average of two high times
- *
- */
-
 uint16 Ultrasonic_readDistance(void) {
+	_delay_ms(100);
 	uint16 timeHigh2;
 	uint16 timeHigh1;
 	uint16 avgTimeHigh;
@@ -73,7 +69,6 @@ uint16 Ultrasonic_readDistance(void) {
 	g_edgeCount=0; /* reset edge count */
 	timeHigh2=g_timeHigh;
 	avgTimeHigh= (timeHigh1+timeHigh2)/2;
-	_delay_ms(100); /* according to datasheet period of trigger plus should be at least 60 ms */
 	return ((float) avgTimeHigh / 58.8);
 }
 

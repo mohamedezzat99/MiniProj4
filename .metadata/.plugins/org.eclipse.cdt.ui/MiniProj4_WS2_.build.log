@@ -1,4 +1,4 @@
-20:02:03 **** Incremental Build of configuration Debug for project MiniProj4_WS2_ ****
+09:54:45 **** Incremental Build of configuration Debug for project MiniProj4_WS2_ ****
 make all 
 Building file: ../ultrasonic.c
 Invoking: AVR Compiler
@@ -22,15 +22,15 @@ AVR Memory Usage
 ----------------
 Device: atmega16
 
-Program:    9684 bytes (59.1% Full)
+Program:    9980 bytes (60.9% Full)
 (.text + .data + .bootloader)
 
-Data:        285 bytes (27.8% Full)
+Data:        289 bytes (28.2% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-20:02:04 Build Finished. 0 errors, 1 warnings. (took 566ms)
+09:54:46 Build Finished. 0 errors, 1 warnings. (took 523ms)
 
